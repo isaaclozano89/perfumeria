@@ -23,7 +23,7 @@ def init_db():
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT nombre, mensaje FROM sugerencias;')
+    cur.execute('SELECT * FROM sugerencias;')
     comentarios = cur.fetchall()
     cur.close()
     conn.close()
