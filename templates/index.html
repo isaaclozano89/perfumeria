@@ -3,59 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumería de Lujo</title>
+    <title>Fragancia Elite | Perfumería de Lujo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <style>
-        .hero-section { background: #f8f9fa; padding: 60px 0; border-bottom: 1px solid #ddd; }
-        .perfume-card { transition: transform 0.3s; }
-        .perfume-card:hover { transform: scale(1.05); }
+        :root { --dorado: #b89551; --oscuro: #1a1a1a; }
+        body { font-family: 'Playfair Display', serif; background-color: #ffffff; }
+        .navbar { background-color: var(--oscuro); border-bottom: 2px solid var(--dorado); }
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=1000');
+            background-size: cover; background-position: center; height: 60vh; color: white;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+        }
+        .btn-dorado { background-color: var(--dorado); color: white; border: none; transition: 0.3s; }
+        .btn-dorado:hover { background-color: #a38345; color: white; }
+        .card-perfume { border: none; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .card-perfume:hover { transform: translateY(-10px); }
+        .section-title { position: relative; padding-bottom: 15px; margin-bottom: 30px; }
+        .section-title::after { content: ''; background: var(--dorado); height: 3px; width: 50px; position: absolute; bottom: 0; left: 0; }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="#">Fragancia Elite</a>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">FRAGANCIA <span style="color: var(--dorado);">ELITE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-uppercase small" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase small" href="#catalogo">Catálogo</a></li>
+                <li class="nav-item"><a class="nav-link text-uppercase small" href="#sugerencias">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<div class="hero-section text-center">
+<header class="hero">
     <div class="container">
-        <h1 class="display-4">Aromas que Cautivan</h1>
-        <p class="lead">Descubre nuestra colección exclusiva de perfumes importados.</p>
+        <h1 class="display-2 fw-bold">Esencias que definen tu historia</h1>
+        <p class="lead mb-4">Descubre nuestra colección exclusiva de alta gama.</p>
+        <a href="#catalogo" class="btn btn-dorado btn-lg px-5 text-uppercase">Ver Colección</a>
     </div>
-</div>
+</header>
 
-<div class="container my-5">
-    <div class="row">
-        <div class="col-md-6">
-            <h3>Contáctanos</h3>
-            <form action="/enviar" method="POST" class="card p-4 shadow-sm">
-                <div class="mb-3">
-                    <label class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" required>
+<section id="catalogo" class="container py-5">
+    <h2 class="section-title">Nuestra Colección</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card card-perfume h-100">
+                <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=1000" class="card-img-top" alt="Perfume">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Elegance Pour Femme</h5>
+                    <p class="text-muted small">Notas de Jazmín y Vainilla</p>
+                    <p class="h5 mb-3" style="color: var(--dorado);">$120.00</p>
+                    <a href="https://wa.me/TUNUMERO" class="btn btn-dark w-100"><i class="bi bi-whatsapp"></i> Comprar</a>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Sugerencia</label>
-                    <textarea name="mensaje" class="form-control" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-dark w-100">Enviar Comentario</button>
-            </form>
+            </div>
         </div>
-
-        <div class="col-md-6">
-            <h3>Lo que dicen nuestros clientes</h3>
-            <div class="list-group">
-                {% for c in comentarios %}
-                <div class="list-group-item">
-                    <h5>{{ c[0] }}</h5>
-                    <p class="mb-1">{{ c[1] }}</p>
+        <div class="col-md-4">
+            <div class="card card-perfume h-100">
+                <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=1000" class="card-img-top" alt="Perfume">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Midnight Oud</h5>
+                    <p class="text-muted small">Madera de Sándalo y Ámbar</p>
+                    <p class="h5 mb-3" style="color: var(--dorado);">$145.00</p>
+                    <a href="https://wa.me/TUNUMERO" class="btn btn-dark w-100"><i class="bi bi-whatsapp"></i> Comprar</a>
                 </div>
-                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-perfume h-100">
+                <img src="https://images.unsplash.com/photo-1583445013765-43c200bdfde4?q=80&w=1000" class="card-img-top" alt="Perfume">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold">Aqua Sport</h5>
+                    <p class="text-muted small">Cítricos y Brisa Marina</p>
+                    <p class="h5 mb-3" style="color: var(--dorado);">$95.00</p>
+                    <a href="https://wa.me/TUNUMERO" class="btn btn-dark w-100"><i class="bi bi-whatsapp"></i> Comprar</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
+<section id="sugerencias" class="bg-light py-5">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-md-5">
+                <h2 class="section-title text-uppercase">Queremos escucharte</h2>
+                <p class="text-muted">¿Buscas una fragancia en especial? Déjanos tu sugerencia.</p>
+                <form action="/enviar" method="POST" class="p-4 bg-white shadow-sm rounded">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-uppercase">Nombre</label>
+                        <input type="text" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-uppercase">Mensaje</label>
+                        <textarea name="mensaje" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dorado w-100 py-2">ENVIAR SUGERENCIA</button>
+                </form>
+            </div>
+            <div class="col-md-6 offset-md-1">
+                <h3 class="mb-4">OPINIONES RECIENTES</h3>
+                <div class="overflow-auto shadow-sm p-3 bg-white" style="max-height: 400px;">
+                    {% for c in comentarios %}
+                    <div class="border-bottom mb-3 pb-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <div class="rounded-circle bg-dark text-white p-2 me-3" style="width: 35px; height: 35px; text-align: center; font-size: 12px;">{{ c[1][0] | upper }}</div>
+                            <h6 class="mb-0 fw-bold">{{ c[1] }}</h6>
+                        </div>
+                        <p class="text-muted small italic">"{{ c[2] }}"</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-4 bg-dark text-white text-center mt-5">
+    <div class="container">
+        <p class="mb-1 fw-bold">FRAGANCIA ELITE</p>
+        <p class="small text-muted">&copy; 2026 Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
