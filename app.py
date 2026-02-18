@@ -40,6 +40,22 @@ def enviar():
     cur.close()
     conn.close()
     return redirect('/')
+
+@app.route('/admin')
+def admin():
+    clave = request.args.get('clave')
+    PASSWORD_SECRETA = "perfume2026"
+
+    if clave == PASSWORD_SECRETA:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute('SELECT * FROM sugerencias ORDER BY ID desc;')
+        comentarios = cur.fetchall()
+        cur.close()
+        conn.close()
+        return render_template('admin.html', comentarios=comentarios)
+    else:
+        return "<h1>Acceso Denegado</h1><p>No tienes permiso para ver esta página.</p>", 403
     
 init_db()
 
