@@ -21,21 +21,24 @@
           </div>
           <div class="col-md-10 p-5">
               <h2 class="mb-4">Mensajes Recibidos</h2>
-              <div class="card p-4">
-                  <table class="table table-hover">
+              <div class="card p-4 shadow-sm">
+                  <table class="table table-hover" styule="table-layout: fixed; width: 100%;">
                       <thead class="table-dark">
                           <tr>
-                              <tr>ID</tr>
-                              <tr>Clientes</tr>
-                              <tr>Mensajes</tr>
+                              <th style="width: 10%;">ID</tr>
+                              <th style="width: 25%;">Cliente</th>
+                              <th style="width: 65%;">Mensaje</th>
                           </tr>
                       </thead>
                       <tbody>
                            {% for c in comentarios %}
                            <tr>
-                               <td>{{ c[0] }}</td>
-                               <td class="fw-bold text-primary">{{ c[1] }}</td>
-                               <td>{{ c[2] }}</td>
+                               <td class="text-muted">{{ c[0] }}</td>
+                               <td class="fw-bold text-primary text-truncate" title="{{ c[1] }}">
+                                  {{ c[1] }}
+                               <td class="text-wrap" style="word-break: break-word;">
+                                  {{ c[2] }} 
+                               </td>
                            </tr>
                            {% endfor %}
                       </tbody>
