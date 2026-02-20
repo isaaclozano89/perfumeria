@@ -57,6 +57,23 @@ def admin():
     else:
         return "<h1>Acceso Denegado</h1><p>No tienes permiso para ver esta página.</p>", 403
 
+@app.route('/eliminar/<int:id>')
+def eliminar(id):
+    clave = request.args.get('clave')
+    PASSWORD_SECRETA = "perfume2026"
+    
+    if clave == PASSWORD_SECRETA:
+        conn = get_db_connection()
+        cur = conn.cursor()
+        # comando SQL para borrar por ID
+        cur.execute('DELETE FROM sugerencias WHERE id = %s', (id))
+        conn.commit()
+        cur.close()
+        conn.close()
+        return redirect(f'/admin?clave={PASSWORD_SECRETA}')
+    else:
+        return "Acceso denegado", 403
+
 init_db()
 
 if __name__ == '__main__':
