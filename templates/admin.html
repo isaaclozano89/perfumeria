@@ -28,6 +28,7 @@
                                 <th>ID</th>
                                 <th>Cliente</th>
                                 <th>Mensaje</th> 
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,6 +37,13 @@
                                 <td>{{ c[0] }}</td>
                                 <td class="fw-bold text-primary">{{ c[1] }}</td>
                                 <td>{{ c[2] }}</td>
+                                <td>
+                                    <a href="/eliminar/{{ c[0] }}?clave=perfume2026"
+                                        class="btn btn-danger btn-sm"
+                                        onclick="return confirm('¿Estás seguro de eliminar este mensaje?')"
+                                        <i class="bi bi-trash"><i/> Eliminar
+                                    </a>       
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
