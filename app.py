@@ -66,7 +66,7 @@ def eliminar(id):
         conn = get_db_connection()
         cur = conn.cursor()
         # comando SQL para borrar por ID
-        cur.execute('DELETE FROM sugerencias WHERE id = %s', (id))
+        cur.execute('DELETE FROM sugerencias WHERE id = %s', (id,))
         conn.commit()
         cur.close()
         conn.close()
