@@ -20,6 +20,10 @@ def init_db():
     conn.close()
 
 @app.route('/')
+def perfil():
+    return render_template('perfil.html', comentarios=comentarios)
+
+@app.route('/perfumeria')
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
