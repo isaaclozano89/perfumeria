@@ -21,7 +21,7 @@ def init_db():
 
 @app.route('/')
 def perfil():
-    return render_template('perfil.html', comentarios=comentarios)
+    return render_template('perfil.html')
 
 @app.route('/perfumeria')
 def index():
