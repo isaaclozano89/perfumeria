@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre | Desarrollador Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .hero-section { height: 100vh; display: flex; align-items: center; }
+        .text-gradient { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-project { background: #1e293b; border: 1px solid #334155; transition: 0.3s; border-radius: 15px; }
+        .card-project:hover { transform: translateY(-10px); border-color: #38bdf8; }
+        .badge-skill { background: #334155; color: #38bdf8; border: 1px solid #38bdf8; margin: 2px; }
+    </style>
+</head>
+<body>
+
+<div class="container hero-section">
+    <div class="row align-items-center">
+        <div class="col-md-7">
+            <h5 class="text-uppercase tracking-widest text-primary mb-3">Hola, soy</h5>
+            <h1 class="display-1 fw-bold">Tu <span class="text-gradient">Nombre</span></h1>
+            <p class="lead text-muted mb-4">Desarrollador Full Stack Jr. apasionado por crear soluciones elegantes con Python y Flask.</p>
+            <div class="d-flex gap-3">
+                <a href="#proyectos" class="btn btn-primary btn-lg px-4">Ver Proyectos</a>
+                <a href="https://github.com/tu-usuario" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="proyectos" class="container py-5">
+    <h2 class="mb-5 fw-bold">Mis Proyectos</h2>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card card-project h-100 p-4">
+                <div class="d-flex justify-content-between mb-3">
+                    <i class="bi bi-droplet-fill fs-1 text-primary"></i>
+                    <a href="/perfumeria" class="btn btn-sm btn-outline-primary">Ver Demo <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <h3 class="fw-bold">Fragancia Elite</h3>
+                <p class="text-muted">Sistema de catálogo de perfumes con integración a base de datos PostgreSQL, panel de administrador y gestión de mensajes en tiempo real.</p>
+                <div>
+                    <span class="badge badge-skill p-2">Flask</span>
+                    <span class="badge badge-skill p-2">PostgreSQL</span>
+                    <span class="badge badge-skill p-2">Python</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 text-center d-flex align-items-center justify-content-center">
+            <div class="text-muted italic border p-5 rounded-4 border-secondary w-100">
+                <i class="bi bi-plus-circle fs-2"></i>
+                <p>Próximo proyecto en desarrollo...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>  
