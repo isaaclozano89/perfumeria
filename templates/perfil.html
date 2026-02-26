@@ -3,60 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Isaac Lozano Espinoza | Desarrollador Web</title>
+    <title>Portafolio Profesional | Desarrollador Web</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
-        .hero-section { height: 100vh; display: flex; align-items: center; }
-        .text-gradient { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-project { background: #1e293b; border: 1px solid #334155; transition: 0.3s; border-radius: 15px; }
-        .card-project:hover { transform: translateY(-10px); border-color: #38bdf8; }
-        .badge-skill { background: #334155; color: #38bdf8; border: 1px solid #38bdf8; margin: 2px; }   
+        :root {
+            --primary: #2563eb;    /* Azul LinkedIn */
+            --dark: #0f172a;       /* Negro Azulado */
+            --text-main: #334155;  /* Gris oscuro para lectura */
+            --bg-light: #f8fafc;   /* Fondo gris seda */
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-light); 
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Navbar elegante */
+        .navbar {
+            background: rgba(248, 250, 252, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Sección Principal */
+        .hero-section { 
+            padding: 120px 0 80px 0;
+            background: radial-gradient(circle at top right, #dbeafe, transparent 40%);
+        }
+
+        .nombre-titulo {
+            font-size: clamp(2.5rem, 8vw, 4rem); /* Elástico: se ajusta solo */
+            font-weight: 800;
+            color: var(--dark);
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+
+        .text-gradient { 
+            background: linear-gradient(90deg, var(--primary), #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Tarjetas de Proyectos */
+        .card-project {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .card-project:hover {
+            transform: translateY(-10px);
+            shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        /* Habilidades */
+        .skill-badge {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .skill-badge:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: #eff6ff;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body>
 
-<div class="container hero-section">
-    <div class="row align-items-center">
-        <div class="col-md-7">
-            <h5 class="text-uppercase tracking-widest text-primary mb-3">Hola, soy</h5>
-            <h3 class="display-1 fw-bold">Jorge <span class="text-gradient">Lozano</span></h3>
-            <p class="lead text-light mb-4">Aprendiz de Desarrollo Web, HTML5 y CSS3.</p>
-            <div class="d-flex gap-3">
-                <a href="#proyectos" class="btn btn-primary btn-lg px-4">Ver Proyectos</a>
-                <a href="https://github.com/tu-usuario" class="btn btn-outline-light btn-lg px-4"><i class="bi bi-github"></i></a>
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-dark" href="#">PORTAFOLIO</a>
+        <div class="ms-auto">
+            <a href="/perfumeria" class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                <i class="bi bi-shop me-1"></i> Ver Proyecto Perfumes
+            </a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-9">
+                <h5 class="text-primary fw-bold text-uppercase mb-3" style="letter-spacing: 2px;">Desarrollador Full Stack</h5>
+                <h1 class="nombre-titulo mb-4">Hola, soy <span class="text-gradient">Tu Nombre</span></h1>
+                <p class="lead mb-5 text-secondary" style="max-width: 650px; font-size: 1.25rem;">
+                    Especializado en crear soluciones digitales con <span class="text-dark fw-semibold">Python y Flask</span>. 
+                    Enfocado en código limpio, bases de datos robustas y experiencias de usuario excepcionales.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#proyectos" class="btn btn-primary shadow-lg">Ver mis proyectos</a>
+                    <a href="#" class="btn btn-white border px-4 py-3 rounded-4 fw-bold">Descargar CV</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</header>
+
+<section class="container py-5">
+    <div class="row g-3">
+        <div class="col-6 col-md-3">
+            <div class="skill-badge"><i class="bi bi-patch-check text-primary"></i> Python</div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="skill-badge"><i class="bi bi-fire text-orange" style="color: #f97316;"></i> Flask</div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="skill-badge"><i class="bi bi-database text-info"></i> PostgreSQL</div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="skill-badge"><i class="bi bi-code-slash text-success"></i> Web Design</div>
+        </div>
+    </div>
+</section>
 
 <section id="proyectos" class="container py-5">
-    <h2 class="mb-5 fw-bold">Mis Proyectos</h2>
+    <div class="mb-5">
+        <h2 class="fw-bold text-dark">Proyectos Destacados</h2>
+        <div style="width: 50px; height: 4px; background: var(--primary); border-radius: 2px;"></div>
+    </div>
+
     <div class="row">
-        <div class="col-md-6 mb-4">
+        <div class="col-lg-6 mb-4">
             <div class="card card-project h-100 p-4">
-                <div class="d-flex justify-content-between mb-3">
-                    <i class="bi bi-droplet-fill fs-1 text-primary"></i>
-                    <a href="/perfumeria" class="btn btn-sm btn-outline-primary">Ver Demo <i class="bi bi-arrow-right"></i></a>
+                <div class="d-flex justify-content-between align-items-start mb-4">
+                    <div class="bg-primary bg-opacity-10 p-3 rounded-4">
+                        <i class="bi bi-bag-check-fill text-primary fs-2"></i>
+                    </div>
+                    <span class="badge bg-light text-dark border rounded-pill px-3 py-2">Backend + DB</span>
                 </div>
-                <h3 class="text-light">Fragancia Elite</h3>
-                <p class="text-light">Sistema de catálogo de perfumes con integración a base de datos PostgreSQL, panel de administrador y gestión de mensajes en tiempo real.</p>
-                <div>
-                    <span class="badge badge-skill p-2">Flask</span>
-                    <span class="badge badge-skill p-2">PostgreSQL</span>
-                    <span class="badge badge-skill p-2">Python</span>
+                <h3 class="fw-bold mb-3">Fragancia Elite</h3>
+                <p class="text-secondary mb-4">
+                    Sistema integral para una perfumería que incluye catálogo interactivo, 
+                    captura de sugerencias en PostgreSQL y un panel de administración privado para gestión de mensajes.
+                </p>
+                <div class="mt-auto">
+                    <a href="/perfumeria" class="btn btn-dark w-100 rounded-3">Explorar Demo <i class="bi bi-arrow-up-right-circle ms-2"></i></a>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 mb-4 text-center d-flex align-items-center justify-content-center">
-            <div class="text-muted italic border p-5 rounded-4 border-secondary w-100">
-                <i class="bi bi-plus-circle fs-2"></i>
-                <p>Próximo proyecto en desarrollo...</p>
+
+        <div class="col-lg-6 mb-4">
+            <div class="card card-project h-100 p-4 border-dashed d-flex align-items-center justify-content-center text-center" style="border: 2px dashed #cbd5e1; background: transparent;">
+                <div>
+                    <i class="bi bi-plus-circle-dotted fs-1 text-muted mb-3"></i>
+                    <h4 class="text-muted">Próximo Proyecto</h4>
+                    <p class="text-muted small">Actualmente trabajando en algo increíble...</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<footer class="py-5 text-center border-top mt-5">
+    <p class="text-muted">© 2026 Tu Nombre | Construido con Python & Flask</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>  
+</html>
