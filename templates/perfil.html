@@ -13,6 +13,13 @@
         .card-project { background: #1e293b; border: 1px solid #334155; transition: 0.3s; border-radius: 15px; }
         .card-project:hover { transform: translateY(-10px); border-color: #38bdf8; }
         .badge-skill { background: #334155; color: #38bdf8; border: 1px solid #38bdf8; margin: 2px; }
+        .nombre-titulo {font-size: 8vw; white-space: nowrap; display: inline-block;}
+        @media (min-width: 992px) {
+        .nombre-titulo {
+        font-size: 3.5rem; 
+    }
+}   
+        
     </style>
 </head>
 <body>
@@ -21,7 +28,7 @@
     <div class="row align-items-center">
         <div class="col-md-7">
             <h5 class="text-uppercase tracking-widest text-primary mb-3">Hola, soy</h5>
-            <h2 class="display-1 fw-bold">Jorge <span class="text-gradient">Lozano</span></h2>
+            <h2 class="nombre-titulo fw-bold">Jorge <span class="text-gradient">Lozano</span></h2>
             <p class="lead text-light mb-4">Aprendiz de Desarrollo Web, HTML5 y CSS3.</p>
             <div class="d-flex gap-3">
                 <a href="#proyectos" class="btn btn-primary btn-lg px-4">Ver Proyectos</a>
