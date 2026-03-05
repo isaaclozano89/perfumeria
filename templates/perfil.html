@@ -1,25 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV & Portafolio | Jorge Isaac Lozano</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
             --primary-bg: #f8fafc;
-            --primary: #0f172a; /* Azul marino muy oscuro */
-            --secondary: #334155; /* Gris oscuro para texto */
-            --accent: #2563eb; /* Azul para detalles */
+            --primary: #0f172a;
+            /* Azul marino muy oscuro */
+            --secondary: #334155;
+            /* Gris oscuro para texto */
+            --accent: #2563eb;
+            /* Azul para detalles */
             --white: #ffffff;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--primary-bg); 
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-bg);
             color: var(--secondary);
             line-height: 1.6;
             overflow-x: hidden;
@@ -32,17 +38,27 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #e2e8f0;
         }
-        .nav-link { font-weight: 500; color: var(--secondary) !important; transition: color 0.3s ease; }
-        .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--secondary) !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent) !important;
+        }
 
         /* Hero Section */
-        .hero { 
+        .hero {
             padding: 160px 0 100px 0;
             background: var(--primary);
             color: var(--white);
             position: relative;
             overflow: hidden;
         }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -50,22 +66,25 @@
             right: -20%;
             width: 800px;
             height: 800px;
-            background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, rgba(15,23,42,0) 70%);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(15, 23, 42, 0) 70%);
             border-radius: 50%;
         }
+
         .hero-title {
-            font-size: clamp(2.5rem, 6vw, 4.5rem); 
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 800;
             letter-spacing: -1.5px;
             line-height: 1.1;
             margin-bottom: 1rem;
         }
+
         .hero-subtitle {
             font-weight: 400;
             color: #94a3b8;
             font-size: clamp(1.2rem, 3vw, 1.8rem);
             margin-bottom: 2.5rem;
         }
+
         .contact-pill {
             display: inline-flex;
             align-items: center;
@@ -79,8 +98,16 @@
             color: #e2e8f0;
             transition: background 0.3s;
         }
-        .contact-pill:hover { background: rgba(255, 255, 255, 0.1); }
-        .contact-pill i { color: #60a5fa; margin-right: 10px; font-size: 1.1rem; }
+
+        .contact-pill:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-pill i {
+            color: #60a5fa;
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
 
         /* Section Titles */
         .section-title {
@@ -91,6 +118,7 @@
             padding-bottom: 15px;
             display: inline-block;
         }
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -108,19 +136,29 @@
             border: 1px solid #e2e8f0;
             border-radius: 20px;
             padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
             transition: transform 0.3s, box-shadow 0.3s;
-            height: 100%;
         }
+
         .card-custom:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
             border-color: #cbd5e1;
         }
 
         /* Resumen Profesional */
-        .summary-text { font-size: 1.15rem; color: var(--secondary); leading-trim: both; text-edge: cap; line-height: 1.8; }
-        .summary-highlight { color: var(--accent); font-weight: 600; }
+        .summary-text {
+            font-size: 1.15rem;
+            color: var(--secondary);
+            leading-trim: both;
+            text-edge: cap;
+            line-height: 1.8;
+        }
+
+        .summary-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
 
         /* Timeline de Experiencia */
         .timeline {
@@ -129,11 +167,16 @@
             position: relative;
             margin-left: 15px;
         }
+
         .timeline-item {
             position: relative;
             margin-bottom: 3rem;
         }
-        .timeline-item:last-child { margin-bottom: 0; }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -146,6 +189,7 @@
             border: 4px solid var(--accent);
             box-shadow: 0 0 0 4px var(--primary-bg);
         }
+
         .timeline-date {
             display: inline-block;
             background: #eff6ff;
@@ -156,9 +200,24 @@
             font-weight: 700;
             margin-bottom: 10px;
         }
-        .timeline-title { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 5px; }
-        .timeline-company { font-size: 1.05rem; font-weight: 600; color: #64748b; margin-bottom: 12px; }
-        .timeline-desc { color: var(--secondary); }
+
+        .timeline-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .timeline-desc {
+            color: var(--secondary);
+        }
 
         /* Habilidades Técnicas Progress Bars */
         .skill-header {
@@ -169,6 +228,7 @@
             font-weight: 600;
             color: var(--primary);
         }
+
         .progress {
             height: 8px;
             background-color: #e2e8f0;
@@ -176,13 +236,19 @@
             overflow: hidden;
             margin-bottom: 24px;
         }
+
         .progress-bar {
             background-color: var(--accent);
             border-radius: 4px;
         }
 
         /* Lista de Certificaciones */
-        .cert-list { list-style: none; padding: 0; margin: 0; }
+        .cert-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
         .cert-item {
             display: flex;
             align-items: flex-start;
@@ -192,17 +258,36 @@
             border-radius: 12px;
             border: 1px solid #e2e8f0;
         }
-        .cert-item i { color: #f59e0b; font-size: 1.5rem; margin-right: 15px; margin-top: 2px; }
-        .cert-title { font-weight: 600; color: var(--primary); margin: 0; }
-        .cert-meta { font-size: 0.85rem; color: #64748b; margin: 0; }
+
+        .cert-item i {
+            color: #f59e0b;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 2px;
+        }
+
+        .cert-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .cert-meta {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin: 0;
+        }
 
         /* Proyectos de Portafolio */
         .project-icon {
-            width: 55px; height: 55px;
+            width: 55px;
+            height: 55px;
             border-radius: 16px;
             background: #eff6ff;
             color: var(--accent);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.8rem;
             margin-bottom: 0;
         }
@@ -212,329 +297,362 @@
             background-color: var(--primary);
             color: #94a3b8;
             padding: 40px 0;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
+
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-    <div class="container">
-        <a class="navbar-brand fw-bold text-dark" href="#">JIL<span style="color: var(--accent);">.</span></a>
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <i class="bi bi-list fs-2 text-dark"></i>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav gap-3">
-                <li class="nav-item"><a class="nav-link" href="#resumen">Resumen</a></li>
-                <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-                <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-                <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">JIL<span style="color: var(--accent);">.</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-2 text-dark"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#resumen">Resumen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Hero Section -->
-<header class="hero">
-    <div class="container position-relative z-1">
-        <div class="row">
-            <div class="col-lg-10">
-                <h1 class="hero-title">Jorge Isaac Lozano</h1>
-                <h3 class="hero-subtitle">Licenciado en Informática Administrativa</h3>
-                
-                <div class="d-flex flex-wrap mt-4">
-                    <div class="contact-pill">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <span>Tegucigalpa, Honduras</span>
-                    </div>
-                    <div class="contact-pill">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span>+504 9512-8368</span>
-                    </div>
-                    <div class="contact-pill">
-                        <i class="bi bi-envelope-fill"></i>
-                        <span>isaaclozano89@gmail.com</span>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container position-relative z-1">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h1 class="hero-title">Jorge Isaac Lozano</h1>
+                    <h3 class="hero-subtitle">Licenciado en Informática Administrativa</h3>
+
+                    <div class="d-flex flex-wrap mt-4">
+                        <div class="contact-pill">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Tegucigalpa, Honduras</span>
+                        </div>
+                        <div class="contact-pill">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span>+504 9512-8368</span>
+                        </div>
+                        <div class="contact-pill">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span>isaaclozano89@gmail.com</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- Contenido Principal -->
-<main class="container py-5 my-4">
+    <!-- Contenido Principal -->
+    <main class="container py-5 my-4">
 
-    <!-- Resumen Profesional -->
-    <section id="resumen" class="mb-5 pb-4">
-        <h2 class="section-title">Resumen Profesional</h2>
-        <div class="card-custom">
-            <p class="summary-text mb-0">
-                Profesional en Informática Administrativa con sólida experiencia orientada a garantizar la calidad y eficiencia operativa. Me especializo en el <span class="summary-highlight">análisis de software</span>, la ejecución de <span class="summary-highlight">pruebas funcionales (QA)</span> y brindar un enfoque integral de <span class="summary-highlight">soporte técnico especializado</span>. Durante mi trayectoria en corporaciones de los rubros bancario y de telecomunicaciones, he destacado en asegurar que los sistemas misionales operen bajo los más altos estándares tecnológicos, optimizando la gestión de plataformas corporativas y canales digitales.
+        <!-- Resumen Profesional -->
+        <section id="resumen" class="mb-5 pb-4">
+            <h2 class="section-title">Resumen Profesional</h2>
+            <div class="card-custom">
+                <p class="summary-text mb-0">
+                    Profesional en Informática Administrativa con sólida experiencia orientada a garantizar la calidad y
+                    eficiencia operativa. Me especializo en el <span class="summary-highlight">análisis de
+                        software</span>, la ejecución de <span class="summary-highlight">pruebas funcionales (QA)</span>
+                    y brindar un enfoque integral de <span class="summary-highlight">soporte técnico
+                        especializado</span>. Durante mi trayectoria en corporaciones de los rubros bancario y de
+                    telecomunicaciones, he destacado en asegurar que los sistemas misionales operen bajo los más altos
+                    estándares tecnológicos, optimizando la gestión de plataformas corporativas y canales digitales.
+                </p>
+            </div>
+        </section>
+
+        <!-- Columnas: Experiencia y Habilidades -->
+        <div class="row g-5">
+
+            <!-- Experiencia Laboral -->
+            <div class="col-lg-7">
+                <section id="experiencia" class="mb-5">
+                    <h2 class="section-title">Experiencia Profesional</h2>
+                    <div class="card-custom py-4 pe-4">
+                        <div class="timeline">
+
+                            <!-- Ficohsa -->
+                            <div class="timeline-item">
+                                <span class="timeline-date">2024 - 2025</span>
+                                <h3 class="timeline-title">Oficial de Canales Digitales</h3>
+                                <h4 class="timeline-company"><i class="bi bi-bank me-2"></i>Banco Ficohsa</h4>
+                                <p class="timeline-desc">
+                                    Lideré la ejecución de <strong>pruebas de sanidad</strong> críticas para plataformas
+                                    transaccionales como Interbanca y SARA. Provisión de soporte técnico de nivel
+                                    avanzado orientado a canales digitales, gestión y enrolamiento exitoso del sistema
+                                    <strong>VU Security</strong>, y redacción de manuales de procedimientos
+                                    operacionales para el área técnica.
+                                </p>
+                            </div>
+
+                            <!-- Tigo -->
+                            <div class="timeline-item">
+                                <span class="timeline-date">2016-2019 / 2025-2026</span>
+                                <h3 class="timeline-title">Analista de Software</h3>
+                                <h4 class="timeline-company"><i class="bi bi-broadcast me-2"></i>Tigo Honduras</h4>
+                                <p class="timeline-desc">
+                                    Análisis y ejecución de pruebas de calidad en entornos core como <strong>AS400 y
+                                        plataformas de integración vía SOAP UI</strong>. Participación activa en
+                                    implementaciones estructurales de alto impacto como el <strong>Proyecto HLR y PCC
+                                        2.0</strong>, además de brindar administración y escalamiento operativo en el
+                                    CRM <strong>SIEBEL</strong>.
+                                </p>
+                            </div>
+
+                            <!-- Práctica Profesional -->
+                            <div class="timeline-item">
+                                <span class="timeline-date">2015</span>
+                                <h3 class="timeline-title">Práctica Profesional IT</h3>
+                                <h4 class="timeline-company"><i class="bi bi-buildings me-2"></i>Cámara de Comercio</h4>
+                                <p class="timeline-desc mb-0">
+                                    Asistencia directa en Mesa de Ayuda (Soporte Técnico de IT), mantenimiento de
+                                    hardware/software, diagnóstico de redes y contribución al diseño y desarrollo de
+                                    módulos utilitarios programados en <strong>PHP</strong>.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Habilidades & Idiomas -->
+            <div class="col-lg-5">
+                <section id="habilidades" class="mb-5">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <div class="card-custom">
+
+                        <div class="skill-header">
+                            <span>QA Testing (Pruebas Funcionales)</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;"></div>
+                        </div>
+
+                        <div class="skill-header">
+                            <span>Gestión de Canales Digitales</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;"></div>
+                        </div>
+
+                        <div class="skill-header">
+                            <span>Soporte Técnico Especializado</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+                        </div>
+
+                        <div class="skill-header">
+                            <span>Microsoft Excel Avanzado</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+                        </div>
+
+                        <div class="skill-header">
+                            <span>SQL & Python (Fundamentos y queries)</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar mb-0" role="progressbar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-5">
+                    <h2 class="section-title">Idiomas</h2>
+                    <div class="card-custom">
+                        <ul class="list-group list-group-flush border-0">
+                            <li
+                                class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0 pt-0 border-0">
+                                <strong><i class="bi bi-translate text-primary me-2"></i> Español</strong>
+                                <span class="badge bg-primary rounded-pill px-3">Nativo</span>
+                            </li>
+                            <li
+                                class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0 pb-0 border-0 mt-3">
+                                <strong><i class="bi bi-globe-americas text-primary me-2"></i> Inglés</strong>
+                                <span class="badge bg-secondary rounded-pill px-3">Intermedio</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div> <!-- /row -->
+
+        <!-- Educación y Certificaciones -->
+        <section id="educacion" class="mb-5 pb-3">
+            <div class="row g-4">
+                <!-- Educación Formal -->
+                <div class="col-md-5">
+                    <h2 class="section-title">Educación Formal</h2>
+                    <div class="card-custom d-flex align-items-center">
+                        <div class="icon-box me-4" style="flex-shrink: 0; margin-bottom: 0; width: 60px; height: 60px;">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-1 fw-bold text-dark">Licenciatura en Informática Administrativa</h4>
+                            <p class="text-secondary mb-0 fw-medium">Universidad Nacional Autónoma de Honduras (UNAH)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 card-custom">
+                        <h4 class="fw-bold text-dark mb-4"><i
+                                class="bi bi-person-vcard text-primary me-2"></i>Referencias Profesionales</h4>
+
+                        <div class="mb-3 pb-3 border-bottom">
+                            <h6 class="fw-bold mb-1 text-dark">Edwin Omar Cruz</h6>
+                            <p class="text-secondary small mb-1">Compañero Analista - Tigo Honduras</p>
+                            <a href="tel:+504xxxxxxx" class="text-decoration-none text-primary small"><i
+                                    class="bi bi-telephone-fill me-1"></i> Contactar Vía Telefónica</a>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold mb-1 text-dark">Carlos René Cruz</h6>
+                            <p class="text-secondary small mb-1">Mesa de Ayuda - Banco Ficohsa</p>
+                            <a href="tel:+504xxxxxxx" class="text-decoration-none text-primary small"><i
+                                    class="bi bi-telephone-fill me-1"></i> Contactar Vía Telefónica</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificaciones -->
+                <div class="col-md-7">
+                    <h2 class="section-title">Certificaciones Destacadas</h2>
+                    <div class="card-custom">
+                        <ul class="cert-list">
+                            <li class="cert-item">
+                                <i class="bi bi-google"></i>
+                                <div>
+                                    <h5 class="cert-title">Certificado Profesional de Ciberseguridad de Google</h5>
+                                    <p class="cert-meta">Google (2024 - 2025) - Especialización integral de seguridad y
+                                        redes.</p>
+                                </div>
+                            </li>
+                            <li class="cert-item">
+                                <i class="bi bi-google"></i>
+                                <div>
+                                    <h5 class="cert-title">Fundamentos de Python y Automatización</h5>
+                                    <p class="cert-meta">Google (2024 - 2025) - Programación y análisis básico.</p>
+                                </div>
+                            </li>
+                            <li class="cert-item">
+                                <i class="bi bi-code-slash text-primary"></i>
+                                <div>
+                                    <h5 class="cert-title">Desarrollo y Diseño Web Responsive</h5>
+                                    <p class="cert-meta">Múltiples plataformas - Maquetado semántico (HTML5,
+                                        CSS3/Bootstrap).</p>
+                                </div>
+                            </li>
+                            <li class="cert-item" style="border-bottom: none; margin-bottom: 0;">
+                                <i class="bi bi-cpu text-primary"></i>
+                                <div>
+                                    <h5 class="cert-title">Fundamentos Universales de Programación</h5>
+                                    <p class="cert-meta">Lógica, SQL y metodologías estructuradas.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portafolio de Proyectos -->
+        <section id="portafolio" class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title mx-auto text-center" style="display: inline-block;">Proyectos de Desarrollo
+                </h2>
+                <p class="text-center text-muted">Ejemplos vivos de mi trabajo práctico en código.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Proyecto 1: Fragancia Elite -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="card card-custom p-4 d-flex flex-column h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div class="project-icon">
+                                <i class="bi bi-bag-check-fill"></i>
+                            </div>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Full Stack</span>
+                        </div>
+
+                        <h3 class="fw-bold mb-3" style="color: var(--primary);">Fragancia Elite</h3>
+                        <p class="text-secondary mb-4 flex-grow-1">
+                            Sistema integral web para una perfumería de lujo. Incluye un catálogo interactivo con
+                            filtrado dinámico, motor de captura de sugerencias conectado a una base de datos PostgreSQL,
+                            y un riguroso panel de administración (Flask/Python).
+                        </p>
+
+                        <div class="mt-auto pt-3 border-top border-light">
+                            <a href="/perfumeria" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-dark w-100 py-3 fw-semibold rounded-3 d-flex justify-content-center align-items-center">
+                                Visitar Sitio Web <i class="bi bi-arrow-up-right ms-2 fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2: Dulce Promesa -->
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="card card-custom p-4 d-flex flex-column h-100">
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div class="project-icon" style="color: #f43f5e; background-color: #ffe4e6;">
+                                <i class="bi bi-cake2-fill"></i>
+                            </div>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">UI/UX Design</span>
+                        </div>
+
+                        <h3 class="fw-bold mb-3" style="color: var(--primary);">Dulce Promesa</h3>
+                        <p class="text-secondary mb-4 flex-grow-1">
+                            Revolucionaria Single Page Application (SPA) temática y colorida diseñada para una
+                            pastelería premium (Artesanal). Desarrollada Mobile-First, cuenta con IntersectionObserver
+                            animations, Glassmorphism menús y redirecciones a WhatsApp para ventas directas.
+                        </p>
+
+                        <div class="mt-auto pt-3 border-top border-light">
+                            <a href="https://isaaclozano89.github.io/pasteleria-artesanal/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-dark w-100 py-3 fw-semibold rounded-3 d-flex justify-content-center align-items-center">
+                                Visitar Sitio Web <i class="bi bi-arrow-up-right ms-2 fs-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-5">
+        <div class="container d-flex flex-column align-items-center">
+            <div class="mb-4">
+                <h4 class="fw-bold text-white mb-1">Jorge Isaac Lozano</h4>
+                <p class="mb-0">Tegucigalpa, Francisco Morazán</p>
+            </div>
+
+            <p class="small mb-0" style="color: #64748b;">
+                © 2026 Jorge Isaac Lozano. Todos los derechos reservados.<br>
+                Construido con <i class="bi bi-heart-fill text-danger mx-1"></i> HTML5, Bootstrap 5 y CSS3.
             </p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Columnas: Experiencia y Habilidades -->
-    <div class="row g-5">
-        
-        <!-- Experiencia Laboral -->
-        <div class="col-lg-7">
-            <section id="experiencia" class="mb-5">
-                <h2 class="section-title">Experiencia Profesional</h2>
-                <div class="card-custom py-4 pe-4">
-                    <div class="timeline">
-                        
-                        <!-- Ficohsa -->
-                        <div class="timeline-item">
-                            <span class="timeline-date">2024 - 2025</span>
-                            <h3 class="timeline-title">Oficial de Canales Digitales</h3>
-                            <h4 class="timeline-company"><i class="bi bi-bank me-2"></i>Banco Ficohsa</h4>
-                            <p class="timeline-desc">
-                                Lideré la ejecución de <strong>pruebas de sanidad</strong> críticas para plataformas transaccionales como Interbanca y SARA. Provisión de soporte técnico de nivel avanzado orientado a canales digitales, gestión y enrolamiento exitoso del sistema <strong>VU Security</strong>, y redacción de manuales de procedimientos operacionales para el área técnica.
-                            </p>
-                        </div>
-
-                        <!-- Tigo -->
-                        <div class="timeline-item">
-                            <span class="timeline-date">2016 - 2019 | 2025 - 2026</span>
-                            <h3 class="timeline-title">Analista de Software</h3>
-                            <h4 class="timeline-company"><i class="bi bi-broadcast me-2"></i>Tigo Honduras</h4>
-                            <p class="timeline-desc">
-                                Análisis y ejecución de pruebas de calidad en entornos core como <strong>AS400 y plataformas de integración vía SOAP UI</strong>. Participación activa en implementaciones estructurales de alto impacto como el <strong>Proyecto HLR y PCC 2.0</strong>, además de brindar administración y escalamiento operativo en el CRM <strong>SIEBEL</strong>.
-                            </p>
-                        </div>
-
-                        <!-- Práctica Profesional -->
-                        <div class="timeline-item">
-                            <span class="timeline-date">2015</span>
-                            <h3 class="timeline-title">Práctica Profesional IT</h3>
-                            <h4 class="timeline-company"><i class="bi bi-buildings me-2"></i>Cámara de Comercio</h4>
-                            <p class="timeline-desc mb-0">
-                                Asistencia directa en Mesa de Ayuda (Soporte Técnico de IT), mantenimiento de hardware/software, diagnóstico de redes y contribución al diseño y desarrollo de módulos utilitarios programados en <strong>PHP</strong>.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- Habilidades & Idiomas -->
-        <div class="col-lg-5">
-            <section id="habilidades" class="mb-5">
-                <h2 class="section-title">Habilidades Técnicas</h2>
-                <div class="card-custom">
-                    
-                    <div class="skill-header">
-                        <span>QA Testing (Pruebas Funcionales)</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 95%;"></div>
-                    </div>
-
-                    <div class="skill-header">
-                        <span>Gestión de Canales Digitales</span>
-                        <span>95%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 95%;"></div>
-                    </div>
-
-                    <div class="skill-header">
-                        <span>Soporte Técnico Especializado</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
-                    </div>
-
-                    <div class="skill-header">
-                        <span>Microsoft Excel Avanzado</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
-                    </div>
-
-                    <div class="skill-header">
-                        <span>SQL & Python (Fundamentos y queries)</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar mb-0" role="progressbar" style="width: 80%;"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="mb-5">
-                <h2 class="section-title">Idiomas</h2>
-                <div class="card-custom">
-                    <ul class="list-group list-group-flush border-0">
-                        <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0 pt-0 border-0">
-                            <strong><i class="bi bi-translate text-primary me-2"></i> Español</strong>
-                            <span class="badge bg-primary rounded-pill px-3">Nativo</span>
-                        </li>
-                        <li class="list-group-item bg-transparent d-flex justify-content-between align-items-center px-0 pb-0 border-0 mt-3">
-                            <strong><i class="bi bi-globe-americas text-primary me-2"></i> Inglés</strong>
-                            <span class="badge bg-secondary rounded-pill px-3">Intermedio</span>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </div> <!-- /row -->
-
-    <!-- Educación y Certificaciones -->
-    <section id="educacion" class="mb-5 pb-3">
-        <div class="row g-4">
-            <!-- Educación Formal -->
-            <div class="col-md-5">
-                <h2 class="section-title">Educación Formal</h2>
-                <div class="card-custom d-flex align-items-center">
-                    <div class="icon-box me-4" style="flex-shrink: 0; margin-bottom: 0; width: 60px; height: 60px;">
-                        <i class="bi bi-mortarboard-fill"></i>
-                    </div>
-                    <div>
-                        <h4 class="mb-1 fw-bold text-dark">Licenciatura en Informática Administrativa</h4>
-                        <p class="text-secondary mb-0 fw-medium">Universidad Nacional Autónoma de Honduras (UNAH)</p>
-                    </div>
-                </div>
-
-                <div class="mt-4 card-custom">
-                    <h4 class="fw-bold text-dark mb-4"><i class="bi bi-person-vcard text-primary me-2"></i> Referencias Laborales</h4>
-                    
-                    <div class="mb-3 pb-3 border-bottom">
-                        <h6 class="fw-bold mb-1 text-dark">Edwin Omar Cruz</h6>
-                        <p class="text-secondary small mb-1">Compañero Analista - Tigo Honduras</p>
-                        <!-- Reemplaza en el link el teléfono exacto si lo deseas -->
-                        <a href="#" class="text-decoration-none text-primary small"><i class="bi bi-telephone-fill me-1"></i> Contactar Vía Telefónica</a>
-                    </div>
-                    
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Carlos René Cruz</h6>
-                        <p class="text-secondary small mb-1">Mesa de Ayuda - Banco Ficohsa</p>
-                        <a href="#" class="text-decoration-none text-primary small"><i class="bi bi-telephone-fill me-1"></i> Contactar Vía Telefónica</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certificaciones -->
-            <div class="col-md-7">
-                <h2 class="section-title">Certificaciones Destacadas</h2>
-                <div class="card-custom">
-                    <ul class="cert-list">
-                        <li class="cert-item">
-                            <i class="bi bi-google"></i>
-                            <div>
-                                <h5 class="cert-title">Certificado Profesional de Ciberseguridad de Google</h5>
-                                <p class="cert-meta">Google (2024 - 2025) - Especialización integral de seguridad y redes.</p>
-                            </div>
-                        </li>
-                        <li class="cert-item">
-                            <i class="bi bi-google"></i>
-                            <div>
-                                <h5 class="cert-title">Fundamentos de Python y Automatización</h5>
-                                <p class="cert-meta">Google (2024 - 2025) - Programación y análisis básico.</p>
-                            </div>
-                        </li>
-                        <li class="cert-item">
-                            <i class="bi bi-code-slash text-primary"></i>
-                            <div>
-                                <h5 class="cert-title">Desarrollo y Diseño Web Responsive</h5>
-                                <p class="cert-meta">Múltiples plataformas - Maquetado semántico (HTML5, CSS3/Bootstrap).</p>
-                            </div>
-                        </li>
-                        <li class="cert-item" style="border-bottom: none; margin-bottom: 0;">
-                            <i class="bi bi-cpu text-primary"></i>
-                            <div>
-                                <h5 class="cert-title">Fundamentos Universales de Programación</h5>
-                                <p class="cert-meta">Lógica, bases de datos en SQL y metodologías estructuradas.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portafolio de Proyectos -->
-    <section id="portafolio" class="mb-5">
-        <div class="text-center mb-5 mt-4">
-            <h2 class="section-title mx-auto text-center" style="display: inline-block;">Proyectos de Desarrollo</h2>
-            <p class="text-center text-muted">Ejemplos vivos de mi portafolio digital en código.</p>
-        </div>
-
-        <div class="row g-4 justify-content-center">
-            
-            <!-- Proyecto 1: Fragancia Elite -->
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="card card-custom p-4 d-flex flex-column h-100">
-                    <div class="d-flex justify-content-between align-items-start mb-4">
-                        <div class="project-icon">
-                            <i class="bi bi-bag-check-fill"></i>
-                        </div>
-                        <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">Full Stack</span>
-                    </div>
-                    
-                    <h3 class="fw-bold mb-3" style="color: var(--primary);">Fragancia Elite</h3>
-                    <p class="text-secondary mb-4 flex-grow-1">
-                        Sistema integral web para una perfumería de lujo. Incluye un catálogo interactivo con filtrado dinámico, motor de captura de sugerencias conectado a una base de datos PostgreSQL, y un riguroso panel de administración (Flask/Python).
-                    </p>
-                    
-                    <div class="mt-auto pt-3 border-top border-light">
-                        <a href="/perfumeria" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-100 py-3 fw-semibold rounded-3 d-flex justify-content-center align-items-center">
-                            Visitar Sitio Web <i class="bi bi-arrow-up-right ms-2 fs-5"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Proyecto 2: Dulce Promesa -->
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="card card-custom p-4 d-flex flex-column h-100">
-                    <div class="d-flex justify-content-between align-items-start mb-4">
-                        <div class="project-icon" style="color: #f43f5e; background-color: #ffe4e6;">
-                            <i class="bi bi-cake2-fill"></i>
-                        </div>
-                        <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">UI/UX Design</span>
-                    </div>
-                    
-                    <h3 class="fw-bold mb-3" style="color: var(--primary);">Dulce Promesa</h3>
-                    <p class="text-secondary mb-4 flex-grow-1">
-                        Revolucionaria Single Page Application (SPA) temática y colorida diseñada para una pastelería premium (Artesanal). Desarrollada Mobile-First, cuenta con IntersectionObserver animations, Glassmorphism y botón de pedidos de WhatsApp.
-                    </p>
-                    
-                    <div class="mt-auto pt-3 border-top border-light">
-                        <a href="https://isaaclozano89.github.io/pasteleria-artesanal/" target="_blank" rel="noopener noreferrer" class="btn btn-dark w-100 py-3 fw-semibold rounded-3 d-flex justify-content-center align-items-center">
-                            Visitar Sitio Web <i class="bi bi-arrow-up-right ms-2 fs-5"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-</main>
-
-<footer class="text-center mt-5">
-    <div class="container d-flex flex-column align-items-center">
-        <div class="mb-4">
-            <h4 class="fw-bold text-white mb-1">Jorge Isaac Lozano</h4>
-            <p class="mb-0">Tegucigalpa, Francisco Morazán</p>
-        </div>
-        
-        <p class="small mb-0" style="color: #64748b;">
-            © 2026 Jorge Isaac Lozano. Todos los derechos reservados.<br>
-            Construido con <i class="bi bi-heart-fill text-danger mx-1"></i> HTML5, Bootstrap 5 y CSS3.
-        </p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
